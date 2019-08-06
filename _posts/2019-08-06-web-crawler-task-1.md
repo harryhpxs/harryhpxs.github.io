@@ -39,6 +39,19 @@ HTTP 响应代码
 
 #### 1.3 了解什么是请求头，如何添加请求头。
 
+> 请求头可以被定义为：被用于http请求中并且和请求主体无关的那一类HTTP header。某些请求头如Accept, Accept-*,  If-*允许执行条件请求。某些请求头如：Cookie, User-Agent 和Referer描述了请求本身以确保服务端能返回正确的响应。
+
+参考: https://developer.mozilla.org/zh-CN/docs/Glossary/%E8%AF%B7%E6%B1%82%E5%A4%B4
+
+Requests 添加请求头
+```python
+url = 'https://api.github.com/some/endpoint'
+headers = {'user-agent': 'my-app/0.0.1'}
+
+res = requests.get(url, headers=headers)
+```
+参考: https://2.python-requests.org/en/latest/user/quickstart/#custom-headers
+
 ### 2. 正则表达式
 
 #### 2.1 学习什么是正则表达式并尝试一些正则表达式并进行匹配。
