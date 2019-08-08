@@ -45,7 +45,7 @@ class Solution:
         if l + 1 == r:
             return self.mergeTwoLists(lists[l], lists[r])
 
-        m = l + (r - 1) / 2
+        m = int(l + (r - 1) / 2)
 
         l1 = self.merge(lists, l, m)
         l2 = self.merge(lists, m + 1, r)
@@ -58,11 +58,14 @@ class Solution:
 
         while l1 and l2:
             if l1.val > l2.val:
-                swap(l1, l2)
+                l1, l2 = self.swap(l1, l2)
             tail.next = l1
             l1 = l1.next
             tail = tail.next
 
         tail.next = l1 if l1 else l2
         return dummy.next
+
+    def swap(self, x, y):
+        return y, x
 ```
