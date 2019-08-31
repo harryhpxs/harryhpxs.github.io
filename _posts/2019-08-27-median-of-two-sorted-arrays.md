@@ -29,6 +29,7 @@ Link: https://leetcode.com/problems/median-of-two-sorted-arrays
 
 
 ## 思路
+Ref: https://www.youtube.com/watch?v=LPFhl65R7ww
 
 时间复杂度为 O(log(min(m,n)))
 
